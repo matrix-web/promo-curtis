@@ -1,0 +1,23 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-orange: #fcca0b;
+  --color-orange-100: #eec628;
+  --color-purple: #581551;
+  --color-purple-100: #390a58;
+  --color-red: #DB0941;
+  --color-light-red: #D20808;
+  --color-pink: #E400A4;
+  --color-gray: #484848;
+  --color-light-gray: #939393;
+
+  --font-regular: "Core Rhino", sans-serif;
+  --font-optima: "Optima Cyr", sans-serif;
+  --font-walsheim: "GT Walsheim Pro", sans-serif;
+}
+
+// Breakpoints
+$media-mobile: 320px;
+$media-tablet: 768px;
+$media-laptop: 1024px;
+$media-desktop: 1440px;

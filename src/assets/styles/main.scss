@@ -1,0 +1,92 @@
+@import "fonts";
+@import "variables";
+@import "global";
+
+body {
+  font-family: var(--font-regular);
+  background-color: var(--color-black);
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 700;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a,
+button,
+input,
+label,
+select,
+textarea {
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* custom scrollbar */
+/*.scrollbar {*/
+/*  overflow-y: auto;*/
+/*  &::-webkit-scrollbar-track {*/
+/*    border-radius: 0px;*/
+/*    background-color: var(--color-bluegray-80);*/
+/*  }*/
+/*  &::-webkit-scrollbar {*/
+/*    width: 2px;*/
+/*    background-color: var(--color-bluegray-80);*/
+/*  }*/
+/*  &::-webkit-scrollbar-thumb {*/
+/*    border-radius: 0px;*/
+/*    background-color: var(--color-brand);*/
+/*  }*/
+/*}*/
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}

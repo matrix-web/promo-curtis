@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <meta
+      name="description"
+      content="Акция Curtis - Осуществи свои желания с чаем Curtis"
+    />
+    <meta property="og:type" content="website" />
+    <title>Осуществи свои желания с чаем Curtis</title>
+    <meta
+      name="og:title"
+      property="og:title"
+      content="Осуществи свои желания с чаем Curtis"
+    />
+    <meta
+      name="description"
+      content="Акция Curtis - Осуществи свои желания с чаем Curtis"
+    />
+    <meta
+      name="og:description"
+      property="og:description"
+      content="Акция Curtis - Осуществи свои желания с чаем Curtis"
+    />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="<%= BASE_URL %>ogImage.png" />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" async>
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+
+      ym("<%= VUE_APP_YA_METRIKA %>", "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/<%= VUE_APP_YA_METRIKA %>"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=<%= VUE_APP_GTAG %>"
+    ></script>
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "<%= VUE_APP_GTAG %>");
+    </script>
+
+    <script defer type="text/javascript">
+      function ar_callCounter(sz) {
+        function counter(e, t) {
+          function r(e, t, r) {
+            (t = t || "&"), (r = r || "=");
+            var o = [];
+            for (var n in e)
+              e.hasOwnProperty(n) && o.push(n + r + encodeURIComponent(e[n]));
+            return o.join(t);
+          }
+          function o(e) {
+            var t = {};
+            if (e) {
+              var r = e.split("&");
+              for (var o in r)
+                if (r.hasOwnProperty(o)) {
+                  var n = r[o].split("=");
+                  void 0 !== n[0] &&
+                    void 0 !== n[1] &&
+                    (t[n[0]] = decodeURIComponent(n[1]));
+                }
+            }
+            return t;
+          }
+          function n(e) {
+            return (/^\/\//.test(e) ? "https:" : "") + e;
+          }
+          function i(e, t) {
+            var r = e.cookie.match("(^|;) ?" + t + "=([^;]*)(;|$)");
+            return r ? decodeURIComponent(r[2]) : null;
+          }
+          var d,
+            a = document;
+          "undefined" == typeof AdriverCounter &&
+            (AdriverCounter =
+              (((d = function (e, t, r) {
+                var o = document.domain;
+                if (!(this instanceof AdriverCounter)) return d.items[e];
+                (d.urlParams = d.getUrlParameters(
+                  window.location.search.substring(1)
+                )),
+                  void 0 !== d.urlParams.adrclid &&
+                    (t.fsid = d.urlParams.adrclid),
+                  null !== d.getCookie(document, "adrcid") &&
+                    (t.cid = d.getCookie(document, "adrcid")),
+                  r &&
+                    r.id &&
+                    null !== d.getCookie(document, r.id) &&
+                    (t.suid =
+                      o +
+                      "_" +
+                      encodeURIComponent(d.getCookie(document, r.id))),
+                  r && r.gid1
+                    ? (t.gid1 = r.gid1)
+                    : null !== d.getCookie(document, "_ga") &&
+                      (t.gid1 = encodeURIComponent(
+                        d.getCookie(document, "_ga")
+                      )),
+                  r && r.yid1
+                    ? (t.yid1 = r.yid1)
+                    : null !== d.getCookie(document, "_ym_uid") &&
+                      (t.yid1 = encodeURIComponent(
+                        d.getCookie(document, "_ym_uid")
+                      )),
+                  (t.loc = encodeURIComponent(window.location.href)),
+                  (e = d.items.length || 1),
+                  (d.items[e] = this),
+                  (t.ph = e),
+                  t.custom && (t.custom = d.toQueryString(t.custom, ";")),
+                  d.request(d.toQueryString(t));
+              }).httplize = n),
+              (d.loadScript = function (e) {
+                try {
+                  var t = a.getElementsByTagName("head")[0],
+                    r = a.createElement("script");
+                  r.setAttribute("type", "text/javascript"),
+                    r.setAttribute(
+                      "referrerpolicy",
+                      "no-referrer-when-downgrade"
+                    ),
+                    r.setAttribute("charset", "windows-1251"),
+                    r.setAttribute(
+                      "src",
+                      e.split("![rnd]").join(Math.round(1e6 * Math.random()))
+                    ),
+                    (r.onreadystatechange = function () {
+                      /loaded|complete/.test(this.readyState) &&
+                        ((r.onload = null), t.removeChild(r));
+                    }),
+                    (r.onload = function () {
+                      t.removeChild(r);
+                    }),
+                    t.insertBefore(r, t.firstChild);
+                } catch (e) {}
+              }),
+              (d.toQueryString = r),
+              (d.request = function (e) {
+                var t = d.toQueryString(d.defaults);
+                d.loadScript(
+                  d.redirectHost +
+                    "/cgi-bin/erle.cgi?" +
+                    e +
+                    "&rnd=![rnd]" +
+                    (t ? "&" + t : "")
+                );
+              }),
+              (d.getUrlParameters = o),
+              (d.getCookie = i),
+              (d.items = []),
+              (d.defaults = { tail256: document.referrer || "unknown" }),
+              (d.redirectHost = "https://ad.adriver.ru"),
+              (d.urlParams = {}),
+              d)),
+            new AdriverCounter(0, e, t);
+        }
+        counter(
+          { sid: 225623, bt: 62, sz: sz },
+          { id: "", gid1: "", yid1: "" }
+        );
+      }
+    </script>
+
+    <!--  AdRiver code START. Type:JS-counter Site: 225623 -->
+    <script type="text/javascript" async>
+      !(function (e, t) {
+        function r(e, t, r) {
+          (t = t || "&"), (r = r || "=");
+          var o = [];
+          for (var n in e)
+            e.hasOwnProperty(n) && o.push(n + r + encodeURIComponent(e[n]));
+          return o.join(t);
+        }
+        function o(e) {
+          var t = {};
+          if (e) {
+            var r = e.split("&");
+            for (var o in r)
+              if (r.hasOwnProperty(o)) {
+                var n = r[o].split("=");
+                void 0 !== n[0] &&
+                  void 0 !== n[1] &&
+                  (t[n[0]] = decodeURIComponent(n[1]));
+              }
+          }
+          return t;
+        }
+        function n(e) {
+          return (/^\/\//.test(e) ? "https:" : "") + e;
+        }
+        function i(e, t) {
+          var r = e.cookie.match("(^|;) ?" + t + "=([^;]*)(;|$)");
+          return r ? decodeURIComponent(r[2]) : null;
+        }
+        var d,
+          a = document;
+        "undefined" == typeof AdriverCounter &&
+          (AdriverCounter =
+            (((d = function (e, t, r) {
+              var o = document.domain;
+              if (!(this instanceof AdriverCounter)) return d.items[e];
+              (d.urlParams = d.getUrlParameters(
+                window.location.search.substring(1)
+              )),
+                void 0 !== d.urlParams.adrclid &&
+                  (t.fsid = d.urlParams.adrclid),
+                null !== d.getCookie(document, "adrcid") &&
+                  (t.cid = d.getCookie(document, "adrcid")),
+                r &&
+                  r.id &&
+                  null !== d.getCookie(document, r.id) &&
+                  (t.suid =
+                    o + "_" + encodeURIComponent(d.getCookie(document, r.id))),
+                r && r.gid1
+                  ? (t.gid1 = r.gid1)
+                  : null !== d.getCookie(document, "_ga") &&
+                    (t.gid1 = encodeURIComponent(d.getCookie(document, "_ga"))),
+                r && r.yid1
+                  ? (t.yid1 = r.yid1)
+                  : null !== d.getCookie(document, "_ym_uid") &&
+                    (t.yid1 = encodeURIComponent(
+                      d.getCookie(document, "_ym_uid")
+                    )),
+                (t.loc = encodeURIComponent(window.location.href)),
+                (e = d.items.length || 1),
+                (d.items[e] = this),
+                (t.ph = e),
+                t.custom && (t.custom = d.toQueryString(t.custom, ";")),
+                d.request(d.toQueryString(t));
+            }).httplize = n),
+            (d.loadScript = function (e) {
+              try {
+                var t = a.getElementsByTagName("head")[0],
+                  r = a.createElement("script");
+                r.setAttribute("type", "text/javascript"),
+                  r.setAttribute(
+                    "referrerpolicy",
+                    "no-referrer-when-downgrade"
+                  ),
+                  r.setAttribute("charset", "windows-1251"),
+                  r.setAttribute(
+                    "src",
+                    e.split("![rnd]").join(Math.round(1e6 * Math.random()))
+                  ),
+                  (r.onreadystatechange = function () {
+                    /loaded|complete/.test(this.readyState) &&
+                      ((r.onload = null), t.removeChild(r));
+                  }),
+                  (r.onload = function () {
+                    t.removeChild(r);
+                  }),
+                  t.insertBefore(r, t.firstChild);
+              } catch (e) {}
+            }),
+            (d.toQueryString = r),
+            (d.request = function (e) {
+              var t = d.toQueryString(d.defaults);
+              d.loadScript(
+                d.redirectHost +
+                  "/cgi-bin/erle.cgi?" +
+                  e +
+                  "&rnd=![rnd]" +
+                  (t ? "&" + t : "")
+              );
+            }),
+            (d.getUrlParameters = o),
+            (d.getCookie = i),
+            (d.items = []),
+            (d.defaults = { tail256: document.referrer || "unknown" }),
+            (d.redirectHost = "https://ad.adriver.ru"),
+            (d.urlParams = {}),
+            d)),
+          new AdriverCounter(0, e, t);
+      })({ sid: 225623, bt: 62 }, { id: "", gid1: "", yid1: "" });
+    </script>
+
+    <!--  AdRiver code END  -->
+
+    <script type="text/javascript" defer>
+      (function () {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src =
+          "https://service.mobidriven.com/t/tr/cnt?condition=ZG9tYWluPWRldmVsb3AtdTJjLWN1cnRpcy15b3VyZGVzaXJlLWZyb250ZW5kLmRldi51MmMuc3UmaWQ9MTUx&document_url=" +
+          document.URL;
+        var d = document.getElementsByTagName("script")[0];
+        d.parentNode.insertBefore(s, d);
+      })();
+    </script>
+
+    <script
+      async
+      src="https://creatives.afp.ai/curtis/mar23/curtis.js"
+      type="text/javascript"
+    ></script>
+
+    <script type="text/javascript" async>
+      (function () {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src =
+          "https://prodmp.ru/client/counter.js?condition=Y2xpZW50SWQ9MTk2MyZjb3VudGVySWQ9MTUzNQ==&documentUrl=" +
+          document.URL;
+        var d = document.getElementsByTagName("script")[0];
+        d.parentNode.insertBefore(s, d);
+      })();
+    </script>
+    <noscript>
+      <div>
+        <img
+          src="https://prodmp.ru/client/counter?condition=Y2xpZW50SWQ9MTk2MyZjb3VudGVySWQ9MTUzNQ=="
+          style="position: absolute; left: -9999px"
+          alt=""
+        />
+      </div>
+    </noscript>
+
+    <script async type="text/javascript">
+      (function () {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src =
+          "https://tracking.datadrivenpromotion.com/tracking/counter?condition=ZG9tYWluPXlvdXJkZXNpcmUuY3VydGlzdGVhLmNvbSZpZD0xNTY=&document_url=" +
+          encodeURIComponent(document.URL);
+        var d = document.getElementsByTagName("script")[0];
+        d.parentNode.insertBefore(s, d);
+      })();
+    </script>
+
+    <!--    Билайн  -->
+    <script>
+      function otmButtonOnSubmit() {
+        window.oDataLayer = window.oDataLayer || [];
+        window.oDataLayer.otmDataLayer = "button_onSubmit";
+      }
+    </script>
+    <!--    <script src="https://spx.otm-r.com/js/10000248.js" async defer type="text/javascript"></script>-->
+    <!--    конец Билайн  -->
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <!-- Top.Mail.Ru counter -->
+    <script type="text/javascript" defer>
+      var _tmr = window._tmr || (window._tmr = []);
+      _tmr.push({
+        id: "3298833",
+        type: "pageView",
+        start: new Date().getTime(),
+        pid: "USER_ID",
+      });
+      (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script");
+        ts.type = "text/javascript";
+        ts.async = true;
+        ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () {
+          var s = d.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(ts, s);
+        };
+        if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+          f();
+        }
+      })(document, window, "tmr-code");
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://top-fwz1.mail.ru/counter?id=3298833;js=na"
+          style="position: absolute; left: -9999px"
+          alt="Top.Mail.Ru"
+        /></div
+    ></noscript>
+    <!-- /Top.Mail.Ru counter -->
+  </body>
+</html>
